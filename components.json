@@ -1,0 +1,366 @@
+[
+  {
+    "id": "design",
+    "label": "Design",
+    "items": [
+      {
+        "id": "px-actionable-text-icons-design",
+        "label": "px-actionable-text-icons-design"
+      },
+      {
+        "id": "px-box-design",
+        "label": "px-box-design"
+      },
+      {
+        "id": "px-box-sizing-design",
+        "label": "px-box-sizing-design"
+      },
+      {
+        "id": "px-button-group-design",
+        "label": "px-button-group-design"
+      },
+      {
+        "id": "px-buttons-design",
+        "label": "px-buttons-design"
+      },
+      {
+        "id": "px-clearfix-design",
+        "label": "px-clearfix-design"
+      },
+      {
+        "id": "px-code-design",
+        "label": "px-code-design"
+      },
+      {
+        "id": "px-colors-design",
+        "label": "px-colors-design"
+      },
+      {
+        "id": "px-defaults-design",
+        "label": "px-defaults-design"
+      },
+      {
+        "id": "px-flag-design",
+        "label": "px-flag-design"
+      },
+      {
+        "id": "px-flexbox-design",
+        "label": "px-flexbox-design"
+      },
+      {
+        "id": "px-forms-design",
+        "label": "px-forms-design"
+      },
+      {
+        "id": "px-functions-design",
+        "label": "px-functions-design"
+      },
+      {
+        "id": "px-headings-design",
+        "label": "px-headings-design"
+      },
+      {
+        "id": "px-helpers-design",
+        "label": "px-helpers-design"
+      },
+      {
+        "id": "px-iconography-design",
+        "label": "px-iconography-design"
+      },
+      {
+        "id": "px-layout-design",
+        "label": "px-layout-design"
+      },
+      {
+        "id": "px-list-bare-design",
+        "label": "px-list-bare-design"
+      },
+      {
+        "id": "px-list-inline-design",
+        "label": "px-list-inline-design"
+      },
+      {
+        "id": "px-list-ui-design",
+        "label": "px-list-ui-design"
+      },
+      {
+        "id": "px-meta-buttons-design",
+        "label": "px-meta-buttons-design"
+      },
+      {
+        "id": "px-meta-lists-design",
+        "label": "px-meta-lists-design"
+      },
+      {
+        "id": "px-mixins-design",
+        "label": "px-mixins-design"
+      },
+      {
+        "id": "px-normalize-design",
+        "label": "px-normalize-design"
+      },
+      {
+        "id": "px-spacing-design",
+        "label": "px-spacing-design"
+      },
+      {
+        "id": "px-spacing-responsive-design",
+        "label": "px-spacing-responsive-design"
+      },
+      {
+        "id": "px-starter-kit-design",
+        "label": "px-starter-kit-design"
+      },
+      {
+        "id": "px-tables-design",
+        "label": "px-tables-design"
+      },
+      {
+        "id": "px-toggle-design",
+        "label": "px-toggle-design"
+      },
+      {
+        "id": "px-typography-design",
+        "label": "px-typography-design"
+      },
+      {
+        "id": "px-viewport-design",
+        "label": "px-viewport-design"
+      },
+      {
+        "id": "px-widths-design",
+        "label": "px-widths-design"
+      },
+      {
+        "id": "px-widths-responsive-design",
+        "label": "px-widths-responsive-design"
+      },
+      {
+        "id": "px-widths-tools-design",
+        "label": "px-widths-tools-design"
+      }
+    ]
+  },
+  {
+    "id": "components",
+    "label": "Components",
+    "items": [
+      {
+        "id": "px-alert-label",
+        "label": "px-alert-label"
+      },
+      {
+        "id": "px-alert-message",
+        "label": "px-alert-message"
+      },
+      {
+        "id": "px-app-nav",
+        "label": "px-app-nav"
+      },
+      {
+        "id": "px-card",
+        "label": "px-card"
+      },
+      {
+        "id": "px-deck-selector",
+        "label": "px-deck-selector"
+      },
+      {
+        "id": "px-sample-cards",
+        "label": "px-sample-cards"
+      },
+      {
+        "id": "px-widget-cards",
+        "label": "px-widget-cards"
+      },
+      {
+        "id": "px-percent-circle",
+        "label": "px-percent-circle"
+      },
+      {
+        "id": "px-gauge",
+        "label": "px-gauge"
+      },
+      {
+        "id": "px-simple-area-chart",
+        "label": "px-simple-area-chart"
+      },
+      {
+        "id": "px-simple-bar-chart",
+        "label": "px-simple-bar-chart"
+      },
+      {
+        "id": "px-simple-horizontal-bar-chart",
+        "label": "px-simple-horizontal-bar-chart"
+      },
+      {
+        "id": "px-simple-line-chart",
+        "label": "px-simple-line-chart"
+      },
+      {
+        "id": "px-simple-win-loss-chart",
+        "label": "px-simple-win-loss-chart"
+      },
+      {
+        "id": "px-vis",
+        "label": "px-vis"
+      },
+      {
+        "id": "px-vis-parallel-coordinates",
+        "label": "px-vis-parallel-coordinates"
+      },
+      {
+        "id": "px-vis-pie-chart",
+        "label": "px-vis-pie-chart"
+      },
+      {
+        "id": "px-vis-polar",
+        "label": "px-vis-polar"
+      },
+      {
+        "id": "px-vis-radar",
+        "label": "px-vis-radar"
+      },
+      {
+        "id": "px-vis-spark",
+        "label": "px-vis-spark"
+      },
+      {
+        "id": "px-vis-timeseries",
+        "label": "px-vis-timeseries"
+      },
+      {
+        "id": "px-vis-xy-chart",
+        "label": "px-vis-xy-chart"
+      },
+      {
+        "id": "px-clipboard",
+        "label": "px-clipboard"
+      },
+      {
+        "id": "px-context-browser",
+        "label": "px-context-browser"
+      },
+      {
+        "id": "px-data-table",
+        "label": "px-data-table"
+      },
+      {
+        "id": "px-calendar-picker",
+        "label": "px-calendar-picker"
+      },
+      {
+        "id": "px-datetime-field",
+        "label": "px-datetime-field"
+      },
+      {
+        "id": "px-datetime-picker",
+        "label": "px-datetime-picker"
+      },
+      {
+        "id": "px-datetime-range-field",
+        "label": "px-datetime-range-field"
+      },
+      {
+        "id": "px-datetime-range-panel",
+        "label": "px-datetime-range-panel"
+      },
+      {
+        "id": "px-rangepicker",
+        "label": "px-rangepicker"
+      },
+      {
+        "id": "px-drawer",
+        "label": "px-drawer"
+      },
+      {
+        "id": "px-dropdown",
+        "label": "px-dropdown"
+      },
+      {
+        "id": "px-file-upload",
+        "label": "px-file-upload"
+      },
+      {
+        "id": "px-polymer-font-awesome",
+        "label": "px-polymer-font-awesome"
+      },
+      {
+        "id": "px-inbox",
+        "label": "px-inbox"
+      },
+      {
+        "id": "px-kpi",
+        "label": "px-kpi"
+      },
+      {
+        "id": "px-login",
+        "label": "px-login"
+      },
+      {
+        "id": "px-map",
+        "label": "px-map"
+      },
+      {
+        "id": "px-modal",
+        "label": "px-modal"
+      },
+      {
+        "id": "px-number-formatter",
+        "label": "px-number-formatter"
+      },
+      {
+        "id": "px-overlay",
+        "label": "px-overlay"
+      },
+      {
+        "id": "px-popover",
+        "label": "px-popover"
+      },
+      {
+        "id": "px-progress-bar",
+        "label": "px-progress-bar"
+      },
+      {
+        "id": "px-slider",
+        "label": "px-slider"
+      },
+      {
+        "id": "px-spinner",
+        "label": "px-spinner"
+      },
+      {
+        "id": "px-table-view",
+        "label": "px-table-view"
+      },
+      {
+        "id": "px-tabs",
+        "label": "px-tabs"
+      },
+      {
+        "id": "px-timeline",
+        "label": "px-timeline"
+      },
+      {
+        "id": "px-toggle",
+        "label": "px-toggle"
+      },
+      {
+        "id": "px-tooltip",
+        "label": "px-tooltip"
+      },
+      {
+        "id": "px-typeahead",
+        "label": "px-typeahead"
+      },
+      {
+        "id": "px-validation",
+        "label": "px-validation"
+      },
+      {
+        "id": "px-view-header",
+        "label": "px-view-header"
+      }
+    ]
+  }
+]

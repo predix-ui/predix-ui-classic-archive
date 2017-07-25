@@ -1,0 +1,19 @@
+{
+  "name": "refresh",
+  "private": true,
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "serve": "^6.0.3"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/serve",
+    "build": "./node_modules/.bin/bower install --force-latest"
+  },
+  "now": {
+    "name": "px-refresh",
+    "alias": [
+      "px-refresh",
+      "refresh.predix-ui.com"
+    ]
+  }
+}

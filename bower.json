@@ -1,0 +1,9 @@
+{
+  "name": "refresh",
+  "dependencies": {
+    "polymer": "^1.9.0",
+    "px-tree": "^1.0.1",
+    "px-theme": "^2.0.4",
+    "iron-ajax": "^2.0.2"
+  }
+}
