@@ -8,10 +8,6 @@
         "label": "px-actionable-text-icons-design"
       },
       {
-        "id": "px-accordion",
-        "label": "px-accordion"
-      },
-      {
         "id": "px-box-design",
         "label": "px-box-design"
       },
@@ -149,6 +145,10 @@
     "id": "components",
     "label": "Components",
     "items": [
+      {
+        "id": "px-accordion",
+        "label": "px-accordion"
+      },
       {
         "id": "px-alert-label",
         "label": "px-alert-label"
