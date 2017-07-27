@@ -162,80 +162,12 @@
         "label": "px-app-nav"
       },
       {
+        "id": "px-calendar-picker",
+        "label": "px-calendar-picker"
+      },
+      {
         "id": "px-card",
         "label": "px-card"
-      },
-      {
-        "id": "px-deck-selector",
-        "label": "px-deck-selector"
-      },
-      {
-        "id": "px-sample-cards",
-        "label": "px-sample-cards"
-      },
-      {
-        "id": "px-widget-cards",
-        "label": "px-widget-cards"
-      },
-      {
-        "id": "px-percent-circle",
-        "label": "px-percent-circle"
-      },
-      {
-        "id": "px-gauge",
-        "label": "px-gauge"
-      },
-      {
-        "id": "px-simple-area-chart",
-        "label": "px-simple-area-chart"
-      },
-      {
-        "id": "px-simple-bar-chart",
-        "label": "px-simple-bar-chart"
-      },
-      {
-        "id": "px-simple-horizontal-bar-chart",
-        "label": "px-simple-horizontal-bar-chart"
-      },
-      {
-        "id": "px-simple-line-chart",
-        "label": "px-simple-line-chart"
-      },
-      {
-        "id": "px-simple-win-loss-chart",
-        "label": "px-simple-win-loss-chart"
-      },
-      {
-        "id": "px-vis",
-        "label": "px-vis"
-      },
-      {
-        "id": "px-vis-parallel-coordinates",
-        "label": "px-vis-parallel-coordinates"
-      },
-      {
-        "id": "px-vis-pie-chart",
-        "label": "px-vis-pie-chart"
-      },
-      {
-        "id": "px-vis-polar",
-        "label": "px-vis-polar"
-      },
-      {
-        "id": "px-vis-radar",
-        "label": "px-vis-radar"
-      },
-      {
-        "id": "px-vis-spark",
-        "label": "px-vis-spark"
-      },
-      {
-        "id": "px-vis-timeseries",
-        "label": "px-vis-timeseries"
-      },
-      {
-        "id": "px-vis-xy-chart",
-        "label": "px-vis-xy-chart"
       },
       {
         "id": "px-clipboard",
@@ -248,10 +180,6 @@
       {
         "id": "px-data-table",
         "label": "px-data-table"
-      },
-      {
-        "id": "px-calendar-picker",
-        "label": "px-calendar-picker"
       },
       {
         "id": "px-datetime-field",
@@ -270,8 +198,8 @@
         "label": "px-datetime-range-panel"
       },
       {
-        "id": "px-rangepicker",
-        "label": "px-rangepicker"
+        "id": "px-deck-selector",
+        "label": "px-deck-selector"
       },
       {
         "id": "px-drawer",
@@ -286,8 +214,12 @@
         "label": "px-file-upload"
       },
       {
-        "id": "px-polymer-font-awesome",
-        "label": "px-polymer-font-awesome"
+        "id": "px-gauge",
+        "label": "px-gauge"
+      },
+      {
+        "id": "px-icon-set",
+        "label": "px-icon-set"
       },
       {
         "id": "px-inbox",
@@ -318,12 +250,48 @@
         "label": "px-overlay"
       },
       {
+        "id": "px-percent-circle",
+        "label": "px-percent-circle"
+      },
+      {
+        "id": "px-polymer-font-awesome",
+        "label": "px-polymer-font-awesome"
+      },
+      {
         "id": "px-popover",
         "label": "px-popover"
       },
       {
         "id": "px-progress-bar",
         "label": "px-progress-bar"
+      },
+      {
+        "id": "px-rangepicker",
+        "label": "px-rangepicker"
+      },
+      {
+        "id": "px-sample-cards",
+        "label": "px-sample-cards"
+      },
+      {
+        "id": "px-simple-area-chart",
+        "label": "px-simple-area-chart"
+      },
+      {
+        "id": "px-simple-bar-chart",
+        "label": "px-simple-bar-chart"
+      },
+      {
+        "id": "px-simple-horizontal-bar-chart",
+        "label": "px-simple-horizontal-bar-chart"
+      },
+      {
+        "id": "px-simple-line-chart",
+        "label": "px-simple-line-chart"
+      },
+      {
+        "id": "px-simple-win-loss-chart",
+        "label": "px-simple-win-loss-chart"
       },
       {
         "id": "px-slider",
@@ -364,6 +332,42 @@
       {
         "id": "px-view-header",
         "label": "px-view-header"
+      },
+      {
+        "id": "px-vis",
+        "label": "px-vis"
+      },
+      {
+        "id": "px-vis-parallel-coordinates",
+        "label": "px-vis-parallel-coordinates"
+      },
+      {
+        "id": "px-vis-pie-chart",
+        "label": "px-vis-pie-chart"
+      },
+      {
+        "id": "px-vis-polar",
+        "label": "px-vis-polar"
+      },
+      {
+        "id": "px-vis-radar",
+        "label": "px-vis-radar"
+      },
+      {
+        "id": "px-vis-spark",
+        "label": "px-vis-spark"
+      },
+      {
+        "id": "px-vis-timeseries",
+        "label": "px-vis-timeseries"
+      },
+      {
+        "id": "px-vis-xy-chart",
+        "label": "px-vis-xy-chart"
+      },
+      {
+        "id": "px-widget-cards",
+        "label": "px-widget-cards"
       }
     ]
   }
