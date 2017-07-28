@@ -1,0 +1,19 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js:
+- stable
+branches:
+  except:
+  - gh-pages
+script:
+- echo "No tests ... skipping to deploy"
+after_success:
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$DEPLOYSECRET"
+  -in deploy.enc -out deploy_key -d; fi
+- cd $TRAVIS_BUILD_DIR
+- yarn install
+- "./scripts/build"
+env:
+  global:
+    secure: Ee7uwaiVrEpe7Xmon6m2OGqsk/d4FDZMZVyuFII9DUfzNQePYSLs+GDilizAF3WjjuB/WJ2EzW+ri9mMgWQQCFVrbg7ag3oH9mP7KSk0Jxs28SfqIbqCYIdhuXdk06x+ZSaHSi3drK8AuX1SKxrX/dgLM6YE6lCIKFAywNHrhZ105/jxv+PGYrohA7x+XpDcp1v7tVhvhZ8YCR2f9YdkQCnEtVJQ2TPPDmyH3hY581uyp0vH0z6pDJqSUn6WR5dZzoycB5lQQvZSVvafZx+xTwMfctPc3fCp1IsKeed/F4D7ffwk2OM09G3SO1swrJRYY3i/g5LUAUSizf9jSMD0K7xe417+KFsIAu64WnJBTEvJ43rUjIaMEb7AHKlizaJ1Dzp1Mpe3SYlXylaloGCr83J2pGLM6UF0kPoME9rTCGR7alGe/MGDZE5VhlFOpE+nvs31v2PzEiX0gbSFIK+s9WfFA4/WIWoNh2qP5XEuEbD5dwo7fLfxA/cQTSTR8/Vn3RotALG668TzCrM7jtNHyNBzL0MpQzhZqzoaENeFlt5I0kyqkhe/cju/cw17IZ603TPmPIeuGYuKgrB97Veyf6mL3G7bTN1UuHOd3EVVkqOttAX9F1EQl9IKgvxGGMwTBzTcJt3acnpzu9A0Od5EuELp8kTeiOM3xMBp10SB7sI=
