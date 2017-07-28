@@ -1,0 +1,162 @@
+<!-- Dependency imports -->
+<link rel="import" href="../bower_components/polymer/polymer.html"/>
+<link rel="import" href="../bower_components/px-tree/px-tree.html"/>
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html"/>
+<link rel="import" href="../bower_components/px-toggle/px-toggle.html"/>
+<link rel="import" href="../bower_components/px-theme/px-theme-styles.html"/>
+<link rel="import" href="../bower_components/app-route/app-location.html"/>
+<link rel="import" href="../bower_components/px-app-helpers/px-app-route/px-app-route.html"/>
+
+<!-- Local imports -->
+<link rel="import" href="classic-app-styles.html"/>
+<link rel="import" href="classic-app-about.html"/>
+
+<dom-module id="classic-app">
+  <template>
+    <!-- Styles -->
+    <style include="px-theme-styles"></style>
+    <style include="classic-app-styles"></style>
+
+    <!-- Load data -->
+    <iron-ajax auto url="navigation.json" last-response="{{navData}}"></iron-ajax>
+
+    <!-- Routing -->
+    <app-location route="{{route}}" use-hash-as-path></app-location>
+    <px-app-route
+        route="{{route}}"
+        use-hash-as-path
+        update-nav-route
+        nav-route="{{selectedRoute}}">
+    </px-app-route>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header__text"><a href="/#/about">Predix UI Pre-Refresh Archive</a></div>
+      <div class="header__theme" hidden$="[[noFrameUrl(frameUrl)]]">
+        <span class="header__theme__label">Dark Theme</span>
+        <px-toggle class="header__theme__toggle" size="small" checked="{{useDarkTheme}}"></px-toggle>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="tree">
+        <px-tree
+            id="tree"
+            disable-branch-select
+            items="{{navData}}"
+            selected="{{selectedItem}}"
+            selected-route="{{selectedRoute}}"
+            active="{{activeItem}}"
+            keys='{
+              "id" : "id",
+              "label" : "label",
+              "children" : "items",
+              "icon" : "icon"
+            }'>
+        </px-tree>
+      </div>
+      <div class="page">
+        <iframe class="page__iframe" hidden$="[[noFrameUrl(frameUrl)]]" src$="[[frameUrl]]" allowfullscreen title="Main Documentation Content">
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+        <template is="dom-if" if="[[noFrameUrl(frameUrl)]]">
+          <classic-app-about></classic-app-about>
+        </template>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: 'classic-app',
+
+      properties: {
+        navData: Object,
+        route: Object,
+        activeItem: Object,
+        selectedItem: {
+          type: Object,
+          observer: 'ensureSelectedVisible'
+        },
+        useDarkTheme: {
+          type: Boolean,
+          value: false,
+          observer: 'pushDarkToParam'
+        },
+        frameUrl: {
+          type: String,
+          computed: 'computeFrameUrl(selectedItem, useDarkTheme)'
+        }
+      },
+
+      ready: function() {
+        // We need to wait 200ms or the router won't be able to update the route
+        // for some browsers (ahem, Safari).
+        this.async(function() {
+          // Rewrite no path to `/about`
+          if (this.route && this.route.path === '') {
+            this.set('route.path', '/about');
+            return;
+          }
+          // Pull initial dark theme from route, if it exists
+          if (this.route && this.route.__queryParams && this.route.__queryParams.dark === '') {
+            this.useDarkTheme = true;
+          }
+        }, 200);
+      },
+
+      computeFrameUrl: function(item, useDarkTheme) {
+        if (!item || !item.id) {
+          return null;
+        }
+        else if (item.id === 'about') {
+          return '';
+        }
+        else {
+          return 'https://www.predix-ui.com/' + item.id + '-classic/' + item.id + '/' + (useDarkTheme ? 'index-dark-theme.html' : '');
+        }
+      },
+
+      noFrameUrl: function(frameUrl) {
+        if (frameUrl === '') {
+          return true;
+        }
+        else {
+          return false;
+        }
+      },
+
+      /**
+       * There's a quirk in the px-tree graph - if an item is selected through
+       * the API for the first time, it won't be shown. This is a bit of a
+       * workaround to force the tree to open if we hit that bug.
+       */
+      ensureSelectedVisible: function(selectedItem) {
+        if (selectedItem && selectedItem.id !== 'about' && !this.activeItem) {
+          // Calling internal API. Watch out.
+          var parent = this.$.tree._assetGraph.getParent(selectedItem);
+          if (parent && parent !== this.activeItem) {
+            this.activeItem = parent;
+          }
+        }
+      },
+
+      /**
+       * Pushes changes to the `useDarkTheme` property to the URL as a query
+       * param to keep the window history in sync with page state.
+       */
+      pushDarkToParam: function(useDarkTheme) {
+        if (typeof useDarkTheme !== 'boolean' || !this.route || !this.route.__queryParams) {
+          return;
+        }
+
+        if (useDarkTheme && this.route.__queryParams.dark !== '') {
+          this.set('route.__queryParams.dark', '');
+        }
+        else if (!useDarkTheme && this.route.__queryParams.dark === '') {
+          this.set('route.__queryParams.dark', false);
+        }
+      },
+    })
+  </script>
+</dom-module>

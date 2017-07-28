@@ -1,0 +1,49 @@
+<link rel="import" href="../bower_components/px-theme/px-theme-styles.html"/>
+
+
+<dom-module id="classic-app-about">
+  <template>
+    <style include="px-theme-styles"></style>
+    <style>
+      :host {
+        padding: 3rem;
+      }
+
+      h1, h2 {
+        font-weight: 400;
+      }
+      h1 {
+        color: #09819c;
+        font-size: 45px;
+        margin-top: 0;
+      }
+      h2 {
+        font-size: 30px;
+        margin-top: 2.5rem;
+      }
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 1rem;
+      }
+
+      .content {
+        max-width: 650px;
+      }
+    </style>
+
+    <div class="content">
+      <h1>Predix UI Pre-Refresh Archive</h1>
+      <p>This site is an archive of the pre-refreshed documentation and demos for all Predix Design System components. Unless you meant to visit this archive site, <a href="https://www.predix-ui.com/">you probably want to see the up-to-date documentation and demos on our main site.</a></p>
+
+      <h2>About the design refresh</h2>
+      <p>In July 2017, the Predix Design System was refreshed and all CSS modules and components were overhauled. The updated versions of all Predix Design System components are available on the <a href="https://www.predix-ui.com/">main design system site</a>.</p>
+      <p>The pre-refreshed documentation for all components was placed on this site to as a resource for developers maintaining apps that still rely on the previous versions of all components.</p>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: 'classic-app-about'
+    });
+  </script>
+</dom-module>

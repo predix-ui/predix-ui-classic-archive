@@ -1,10 +1,10 @@
-Predix Design System Refresh Viewer
+Predix Design System Classic Archive
 ===================================
 
-Shows the refreshed design and component documentation pages.
+Archive site for the pre-refresh Predix Design System components.
 
-### Serving locally
+## Developing the site locally
 
-* Run `yarn` to install dependencies
-* Run `yarn start` to serve the app
-* Open it in your browser
+* Run `npm install` or `yarn`
+* Run `bower install`
+* Run `npm run serve`

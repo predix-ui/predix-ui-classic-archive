@@ -1,0 +1,88 @@
+<dom-module id="classic-app-styles">
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        /* Theme for px-tree */
+        --px-tree-text-color--hover: inherit; /* Text color for hovered tree nodes */
+        --px-tree-background-color--hover: rgba(0,0,0,0.1); /* Background color for hovered tree nodes */
+        --px-tree-text-color--selected: white; /* Text color for selected tree nodes */
+        --px-tree-background-color--selected: #3E87E8; /* Background color for selected tree nodes */
+      }
+      *, *::after, *::before {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        padding: 1rem;
+        background-color: #eaeaea;
+        color: #425866; /* classic $gray8 */
+      }
+      .header__text {
+        font-weight: 700;
+        flex: 1 1 auto;
+        text-transform: uppercase;
+      }
+      .header__text a {
+        text-decoration: none;
+        color: #425866;
+      }
+      .header__theme {
+        line-height: 0;
+        display: flex;
+        align-items: center;
+      }
+      .header__theme__label {
+        font-size: 0.8rem;
+      }
+      .header__theme__toggle {
+        margin-left: .333rem;
+      }
+
+      .content {
+        display: block;
+        width: 100vw;
+        height: calc(100vh - 80px);
+        display: flex;
+      }
+
+      .tree {
+        width: 350px;
+        padding: 1rem;
+        background-color: #C5D1D8;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .page {
+        flex: 1 1 auto;
+        display: flex;
+      }
+      .page__iframe:not([hidden]) {
+        flex: 1 1 auto;
+        border: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .about {
+
+      }
+    </style>
+  </template>
+</dom-module>

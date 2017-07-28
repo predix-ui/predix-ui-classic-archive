@@ -1,7 +1,11 @@
 [
   {
-    "id": "design",
-    "label": "Design",
+    "id": "about",
+    "label": "About"
+  },
+  {
+    "id": "css",
+    "label": "CSS Modules",
     "items": [
       {
         "id": "px-actionable-text-icons-design",

@@ -1,10 +1,21 @@
 {
-  "name": "refresh",
+  "name": "predix-ui-classic",
+  "private": true,
   "dependencies": {
+    "app-route": "PolymerElements/app-route#^2.0.0",
     "polymer": "^1.9.0",
     "px-tree": "^1.0.1",
     "px-theme": "^2.0.4",
     "iron-ajax": "^2.0.2",
-    "px-toggle": "^2.0.0"
+    "px-toggle": "^2.0.0",
+    "px-app-helpers": "^1.0.2"
+  },
+  "resolutions": {
+    "px-theme": "^2.0.4",
+    "px-typography-design": "^1.2.0",
+    "px-colors-design": "^0.3.0",
+    "px-defaults-design": "^1.0.2",
+    "px-functions-design": "^1.0.0",
+    "px-mixins-design": "^0.3.0"
   }
 }

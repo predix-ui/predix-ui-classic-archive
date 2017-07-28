@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Exit with nonzero exit code if anything fails
+set -e
+
+# Check if we should run a deploy, or if we should skip it. Only commits to master
+# should trigger a build. Pull requests and commits to features branches should not.
+if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "master" ]; then
+  echo "Skipping deploy; just doing a build."
+  exit 0
+fi
+
+# Run bower install
+./node_modules/.bin/bower install --force-latest
+
+# Stage bower_components/* in git, overriding .gitignore
+git add -A . &>/dev/null
+git add -f bower_components/ &>/dev/null
+echo "git add done"
+
+# Commit the result
+git commit -m "[Travis] build $TRAVIS_COMMIT ($TRAVIS_COMMIT_MESSAGE)" --quiet
+echo "git commit done"
+
+# Delete gh-pages branch if it exists and checkout a new one
+# (pipe to /dev/null and || OR true to ensure we exit 0)
+git branch -D gh-pages &>/dev/null || true
+git checkout -b gh-pages
+
+# Prep git credentials
+GIT_USER_NAME="Travis CI"
+GIT_USER_EMAIL="PredixtravisCI@ge.com"
+git config user.name ${GIT_USER_NAME}
+git config user.email ${GIT_USER_EMAIL}
+
+# Prepare ssh key, which we'll use to authenticate for SSH-push deploy
+eval `ssh-agent -s`
+chmod 0400 $TRAVIS_BUILD_DIR/deploy_key
+ssh-add $TRAVIS_BUILD_DIR/deploy_key
+
+# Push to Github
+git remote set-url origin git@github.com:predix-ui/predix-ui-classic.git
+git push origin gh-pages --force
