@@ -39,5 +39,5 @@ chmod 0400 $TRAVIS_BUILD_DIR/deploy_key
 ssh-add $TRAVIS_BUILD_DIR/deploy_key
 
 # Push to Github
-git remote set-url origin git@github.com:predix-ui/predix-ui-classic.git
+git remote set-url origin git@github.com:predix-ui/predix-ui-classic-archive.git
 git push origin gh-pages --force
