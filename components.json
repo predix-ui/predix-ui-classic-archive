@@ -146,10 +146,6 @@
     "label": "Components",
     "items": [
       {
-        "id": "px-accordion",
-        "label": "px-accordion"
-      },
-      {
         "id": "px-alert-label",
         "label": "px-alert-label"
       },
@@ -216,10 +212,6 @@
       {
         "id": "px-gauge",
         "label": "px-gauge"
-      },
-      {
-        "id": "px-icon-set",
-        "label": "px-icon-set"
       },
       {
         "id": "px-inbox",
