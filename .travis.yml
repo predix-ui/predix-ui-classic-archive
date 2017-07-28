@@ -12,7 +12,6 @@ after_success:
 - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$DEPLOYSECRET"
   -in deploy.enc -out deploy_key -d; fi
 - cd $TRAVIS_BUILD_DIR
-- yarn install
 - "./scripts/build"
 env:
   global:
