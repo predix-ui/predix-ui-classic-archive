@@ -1,0 +1,70 @@
+<script>
+  (function() {
+    'use strict';
+
+    window.PxTreeBehavior = (window.PxTreeBehavior || {});
+
+    /**
+     *
+     * @polymerBehavior PxTreeBehavior
+     */
+    PxTreeBehavior = {
+      properties: {
+        /**
+         * When set to true, branches (nodes with children) can be expanded/collapsed,
+         * but not selected. Only leaves (nodes with no children) will be selectable.
+         */
+        disableBranchSelect: {
+          type: Boolean,
+          value: false
+        }
+      },
+      /**
+       * Determines if an item has children nodes.
+       */
+      _hasChildren: function(item) {
+        return (item.items && item.items.length > 0) ? true : false;
+      },
+      /**
+       * Fetches an item's property at the configured key. Used to dynamically
+       * fetch the item's label, icon, children, etc. based on the configured
+       * `keys` for the app.
+       */
+      _getItemProp(item, key) {
+        return item[key];
+      },
+      /**
+       * Calculates whether the specified item is present in the active path.
+       */
+      _isItemActive: function(active, activeMeta, item, multiActivate) {
+        if(this.multiActivate && typeof active === 'object' && Array.isArray(active)) {
+          var found = false,
+              length = activeMeta.length,
+              i;
+          for(i=0; i<length; i++) {
+            if (activeMeta[i].path.indexOf(item) > -1) {
+              found = true;
+              break;
+            }
+          }
+          return found;
+        }
+        else {
+          return activeMeta && activeMeta.path && activeMeta.path.indexOf(item) > -1;
+        }
+      },
+      /**
+       * Determines whether the specified item is currently selected.
+       */
+      _isItemSelected: function(selected, item, multiSelect) {
+        if(this.multiSelect && typeof selected === 'object' && Array.isArray(selected)) {
+          return selected.indexOf(item) > -1;
+        }
+        else {
+          return selected === item;
+        }
+      }
+    };
+
+  })();
+</script>

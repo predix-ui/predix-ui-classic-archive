@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PX App Header Demo</title>
+    <script>
+      // Load Web Components when not supported
+      var webComponentsSupported = ('registerElement' in document
+      && 'import' in document.createElement('link')
+      && 'content' in document.createElement('template'));
+
+      if (!webComponentsSupported) {
+        var script = document.createElement('script');
+        script.src = '../../webcomponentsjs/webcomponents-lite.js';
+        document.head.appendChild(script);
+      }
+    </script>
+    <link defer rel="import" href="../../polymer/polymer.html">
+    <link defer rel="import" href="px-app-header.html">
+    <link defer rel="import" href="../../px-theme/px-theme-styles.html">
+    <link defer rel="import" href="../../px-colors-design/colors-shared-styles.html">
+    <link defer rel="import" href="../../px-card/px-card.html">
+    <link defer rel="import" href="../../px-app-nav/px-app-nav.html">
+  </head>
+  <body>
+    <style is="custom-style" include="px-theme-styles colors-shared-styles">
+      body{
+        margin: 80px 0px 0px 0px;
+      }
+      :root{
+        --px-app-nav-background-color: var(--px-gray2);
+
+      }
+    </style>
+      <px-app-header>
+        <px-app-nav slot="app-nav" items='[{"path":"tab1","icon":"px-fea:alerts","eventName":"firstItem","label":"Alerts","subitems":[{"label":"Sub Category 1"},{"label":"Sub Category 2","eventName":"subitemTwo"},{"label":"Sub Category 3","path":"subitem3"}]},{"path":"tab2","icon":"px-fea:asset","label":"Cases","subitems":[{"label":"Sub Category 1"},{"label":"Sub Category 2"},{"label":"Sub Category 3"}]},{"path":"tab3","icon":"px-fea:analysis","label":"Analysis"},{"path":"tab4","icon":"px-fea:dashboard","label":"Dashboards"}]'>
+        </px-app-nav>
+        <div>
+          <px-card header-text="moo" icon="px-fea:cases">
+            <p>
+              Tofu poke church-key, next level flannel chicharrones sartorial chia small batch lo-fi celiac hoodie neutra shoreditch aesthetic. Selvage fam iPhone occupy scenester ugh hell of vegan mixtape organic. Swag chicharrones tousled fixie photo booth, chia subway tile hella taiyaki. Cloud bread viral hashtag, hoodie selvage craft beer godard. Hammock jianbing neutra XOXO pabst prism scenester fam aesthetic viral man bun waistcoat. Neutra taxidermy truffaut art party tumeric. Raw denim meditation drinking vinegar godard. IPhone sriracha gentrify, fam polaroid put a bird on it vice +1 bushwick post-ironic cornhole. Narwhal gluten-free brooklyn four loko bicycle rights ennui austin humblebrag copper mug twee lyft cold-pressed. Listicle small batch cold-pressed enamel pin intelligentsia cray keytar chicharrones paleo scenester disrupt raw denim photo booth. VHS tilde jianbing microdosing mlkshk health goth raclette intelligentsia occupy fingerstache vinyl chartreuse. Ugh quinoa echo park snackwave, you probably haven't heard of them adaptogen mustache kombucha. Cray poutine live-edge vape.
+            </p>
+          </px-card>
+          <px-card header-text="baa" icon="px-fea:cases">
+            <p>
+              Tofu poke church-key, next level flannel chicharrones sartorial chia small batch lo-fi celiac hoodie neutra shoreditch aesthetic. Selvage fam iPhone occupy scenester ugh hell of vegan mixtape organic. Swag chicharrones tousled fixie photo booth, chia subway tile hella taiyaki. Cloud bread viral hashtag, hoodie selvage craft beer godard. Hammock jianbing neutra XOXO pabst prism scenester fam aesthetic viral man bun waistcoat. Neutra taxidermy truffaut art party tumeric. Raw denim meditation drinking vinegar godard. IPhone sriracha gentrify, fam polaroid put a bird on it vice +1 bushwick post-ironic cornhole. Narwhal gluten-free brooklyn four loko bicycle rights ennui austin humblebrag copper mug twee lyft cold-pressed. Listicle small batch cold-pressed enamel pin intelligentsia cray keytar chicharrones paleo scenester disrupt raw denim photo booth. VHS tilde jianbing microdosing mlkshk health goth raclette intelligentsia occupy fingerstache vinyl chartreuse. Ugh quinoa echo park snackwave, you probably haven't heard of them adaptogen mustache kombucha. Cray poutine live-edge vape.
+            </p>
+          </px-card>
+          <px-card header-text="quack" icon="px-fea:cases">
+            <p>
+              Tofu poke church-key, next level flannel chicharrones sartorial chia small batch lo-fi celiac hoodie neutra shoreditch aesthetic. Selvage fam iPhone occupy scenester ugh hell of vegan mixtape organic. Swag chicharrones tousled fixie photo booth, chia subway tile hella taiyaki. Cloud bread viral hashtag, hoodie selvage craft beer godard. Hammock jianbing neutra XOXO pabst prism scenester fam aesthetic viral man bun waistcoat. Neutra taxidermy truffaut art party tumeric. Raw denim meditation drinking vinegar godard. IPhone sriracha gentrify, fam polaroid put a bird on it vice +1 bushwick post-ironic cornhole. Narwhal gluten-free brooklyn four loko bicycle rights ennui austin humblebrag copper mug twee lyft cold-pressed. Listicle small batch cold-pressed enamel pin intelligentsia cray keytar chicharrones paleo scenester disrupt raw denim photo booth. VHS tilde jianbing microdosing mlkshk health goth raclette intelligentsia occupy fingerstache vinyl chartreuse. Ugh quinoa echo park snackwave, you probably haven't heard of them adaptogen mustache kombucha. Cray poutine live-edge vape.
+
+            </p>
+          </px-card>
+          <px-card header-text="woof" icon="px-fea:cases">
+            <p>
+              Tofu poke church-key, next level flannel chicharrones sartorial chia small batch lo-fi celiac hoodie neutra shoreditch aesthetic. Selvage fam iPhone occupy scenester ugh hell of vegan mixtape organic. Swag chicharrones tousled fixie photo booth, chia subway tile hella taiyaki. Cloud bread viral hashtag, hoodie selvage craft beer godard. Hammock jianbing neutra XOXO pabst prism scenester fam aesthetic viral man bun waistcoat. Neutra taxidermy truffaut art party tumeric. Raw denim meditation drinking vinegar godard. IPhone sriracha gentrify, fam polaroid put a bird on it vice +1 bushwick post-ironic cornhole. Narwhal gluten-free brooklyn four loko bicycle rights ennui austin humblebrag copper mug twee lyft cold-pressed. Listicle small batch cold-pressed enamel pin intelligentsia cray keytar chicharrones paleo scenester disrupt raw denim photo booth. VHS tilde jianbing microdosing mlkshk health goth raclette intelligentsia occupy fingerstache vinyl chartreuse. Ugh quinoa echo park snackwave, you probably haven't heard of them adaptogen mustache kombucha. Cray poutine live-edge vape.
+
+            </p>
+          </px-card>
+          <px-card header-text="meow" icon="px-fea:cases">
+            <p>
+              Tofu poke church-key, next level flannel chicharrones sartorial chia small batch lo-fi celiac hoodie neutra shoreditch aesthetic. Selvage fam iPhone occupy scenester ugh hell of vegan mixtape organic. Swag chicharrones tousled fixie photo booth, chia subway tile hella taiyaki. Cloud bread viral hashtag, hoodie selvage craft beer godard. Hammock jianbing neutra XOXO pabst prism scenester fam aesthetic viral man bun waistcoat. Neutra taxidermy truffaut art party tumeric. Raw denim meditation drinking vinegar godard. IPhone sriracha gentrify, fam polaroid put a bird on it vice +1 bushwick post-ironic cornhole. Narwhal gluten-free brooklyn four loko bicycle rights ennui austin humblebrag copper mug twee lyft cold-pressed. Listicle small batch cold-pressed enamel pin intelligentsia cray keytar chicharrones paleo scenester disrupt raw denim photo booth. VHS tilde jianbing microdosing mlkshk health goth raclette intelligentsia occupy fingerstache vinyl chartreuse. Ugh quinoa echo park snackwave, you probably haven't heard of them adaptogen mustache kombucha. Cray poutine live-edge vape.
+
+            </p>
+          </px-card>
+          <px-card header-text="nay" icon="px-fea:cases">
+            <p>
+              Tofu poke church-key, next level flannel chicharrones sartorial chia small batch lo-fi celiac hoodie neutra shoreditch aesthetic. Selvage fam iPhone occupy scenester ugh hell of vegan mixtape organic. Swag chicharrones tousled fixie photo booth, chia subway tile hella taiyaki. Cloud bread viral hashtag, hoodie selvage craft beer godard. Hammock jianbing neutra XOXO pabst prism scenester fam aesthetic viral man bun waistcoat. Neutra taxidermy truffaut art party tumeric. Raw denim meditation drinking vinegar godard. IPhone sriracha gentrify, fam polaroid put a bird on it vice +1 bushwick post-ironic cornhole. Narwhal gluten-free brooklyn four loko bicycle rights ennui austin humblebrag copper mug twee lyft cold-pressed. Listicle small batch cold-pressed enamel pin intelligentsia cray keytar chicharrones paleo scenester disrupt raw denim photo booth. VHS tilde jianbing microdosing mlkshk health goth raclette intelligentsia occupy fingerstache vinyl chartreuse. Ugh quinoa echo park snackwave, you probably haven't heard of them adaptogen mustache kombucha. Cray poutine live-edge vape.
+
+            </p>
+          </px-card>
+        </div>
+      </px-app-header>
+  </body>
+</html>

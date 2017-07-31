@@ -16,6 +16,7 @@
     "px-colors-design": "^0.3.0",
     "px-defaults-design": "^1.0.2",
     "px-functions-design": "^1.0.0",
-    "px-mixins-design": "^0.3.0"
+    "px-mixins-design": "^0.3.0",
+    "webcomponentsjs": "^v1.0.2"
   }
 }
