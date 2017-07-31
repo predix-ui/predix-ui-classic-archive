@@ -4,6 +4,10 @@
     "label": "About"
   },
   {
+    "id": "version-finder",
+    "label": "Bower Version Finder"
+  },
+  {
     "id": "css",
     "label": "CSS Modules",
     "items": [
